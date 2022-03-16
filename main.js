@@ -6,7 +6,7 @@ const rangevalueDispaly = document.querySelector(".range-value");
 rangevalueDispaly.textContent = `${slider.value} X ${slider.value}`;
 let sliderValue;
 
-let grids = document.querySelectorAll(".grid");
+let grids;
 
 
 slider.addEventListener("input", gridNumber);
@@ -20,7 +20,6 @@ function defaultGrid() {
   container.style.gridTemplateColumns = `repeat(${slider.value}, 1fr)`;
   grids = document.querySelectorAll(".grid");
   grids.forEach((grid) => grid.addEventListener("mousemove", paint));
-  console.log(grids);
 }
 
 function paint(e) {
